@@ -55,6 +55,7 @@ elif page =='Uni-Variate Analysis':
     st.write('#### Combare between number of  hotels ')
     df_hot=df['hotel'].value_counts().reset_index()
     st.plotly_chart(px.bar(df_hot,x='hotel',y='count',  title='Number  of hotels '))
+    chart_type=st.selectbox('Choose Visualization chart', ['histogram', 'bar']) 
     column=st.selectbox('choose  cloumn',df.columns)
     df_columns=df[column].value_counts().reset_index()
     
